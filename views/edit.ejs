@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post</title>
+  </head>
+  <body>
+    <h1>Edit Post</h1>
+
+    <!-- Form for editing post -->
+    <form
+      action="/edit/<%= post.id %>"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <img
+        src="data:image/jpeg;base64,<%= post.image %>"
+        style="
+          max-width: 200px;
+          max-height: 200px;
+          border: none;
+          outline: none;
+          box-shadow: none;
+        "
+      />
+
+      <textarea name="description" placeholder="Description" required>
+<%= post.description %></textarea
+      >
+      <div class="custom-file-upload">
+        <label for="imageInput">📁 Choose Image</label>
+        <input
+          type="file"
+          id="imageInput"
+          name="image"
+          accept="image/*"
+          required
+        />
+      </div>
+      <button type="submit">Save Changes</button>
+    </form>
+    <br />
+    <a class="homepage" href="/">Back to Posts</a>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+/* Base and Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Center all content */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Headings */
+  h1, h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Form container */
+  form {
+    background-color: #111;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  
+  /* Inputs and textarea */
+  form input[type="file"],
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #222;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+  }
+  
+  /* Button */
+  form button {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    border: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  /* Posts grid */
+  .post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual post card */
+  .post {
+    background-color: #111;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
+  }
+  .image-wrapper {
+    style="border: 1px;
+    solid #ccc; 
+    padding: 10px; 
+    margin-bottom: 10px
+  }
+  
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
+  /* Image styling */
+  .post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Post text */
+  .post p {
+    font-size: 15px;
+    color: #ddd;
+    margin: 12px 0;
+  }
+  
+  /* Post link */
+  .post a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .post a:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  
+
+  
+  /* Back link */
+  .back-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Custom File Upload */
+  .custom-file-upload {
+    position: relative;
+    margin: 12px 0;
+    width: 100%;
+  }
+  
+  .custom-file-upload label {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .custom-file-upload label:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.02);
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+
+  /* Button container */
+.button-group {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .action-button,
+  .action-button:link,
+  .action-button:visited {
+    all: unset;
+    display: flex; /* change from inline-block to flex */
+    align-items: center; /* center content vertically */
+    justify-content: center; /* center content horizontally */
+    height: 40px; /* explicitly set height */
+    line-height: 1; /* normalize line height */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 16px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Hover effect */
+  .action-button:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  /* Delete variant */
+  .action-button.delete {
+    background-color: #ff4444;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  
+  .action-button.delete:hover {
+    background-color: #cc0000;
+    color: #fff;
+  }
+  
+  
+  .action-button.delete:hover {
+    background-color: #cc0000;
+    color: #fff;
+
+  }
+  
+
+  .delete-form {
+    all: unset;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  a.homepage {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  }
+  
+  a.homepage:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  

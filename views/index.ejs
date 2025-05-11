@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <title>The Blog</title>
+  </head>
+  <body>
+    <h1>Welcome to Our Blog</h1>
+
+    <!-- Form for adding a new post -->
+    <h2>Upload New Image</h2>
+    <form action="/add" method="POST" enctype="multipart/form-data">
+      <div class="custom-file-upload">
+        <label for="imageInput">📁 Choose Image</label>
+        <input
+          type="file"
+          id="imageInput"
+          name="image"
+          accept="image/*"
+          required
+        />
+      </div>
+      <textarea
+        name="description"
+        placeholder="Description"
+        required
+      ></textarea>
+      <button type="submit">Add Post</button>
+    </form>
+
+    <!-- Display all posts -->
+    <h2>Posts</h2>
+    <div>
+      <% posts.forEach(post => { %>
+      <div class="image-wrapper">
+        <img
+          src="data:image/jpeg;base64,<%= post.image %>"
+        />
+        <p><%= post.description %></p>
+        <div class="button-group">
+            <a href="/edit/<%= post.id %>" class="action-button">Edit</a>
+            <form action="/delete/<%= post.id %>" method="POST" class="delete-form">
+              <button type="submit" class="action-button delete">Delete</button>
+            </form>
+          </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
